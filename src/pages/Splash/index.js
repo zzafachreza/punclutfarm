@@ -32,8 +32,8 @@ export default function Splash({navigation}) {
   useEffect(() => {
     animasi();
     setTimeout(() => {
-      // navigation.replace('Home');
-    }, 1500);
+      navigation.replace('Login');
+    }, 2000);
   }, []);
   return (
     <View
