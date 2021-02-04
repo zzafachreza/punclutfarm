@@ -25,7 +25,7 @@ export default function Home({navigation}) {
           paddingHorizontal: 20,
         }}>
         <TouchableOpacity
-          onPress={() => navigation.replace('Home')}
+          onPress={() => navigation.navigate('Tambah')}
           style={{
             backgroundColor: '#16A858',
             height: 45,
@@ -48,7 +48,7 @@ export default function Home({navigation}) {
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => navigation.replace('Home')}
+          onPress={() => navigation.navigate('Daftar')}
           style={{
             backgroundColor: '#0E542E',
             height: 45,
@@ -71,7 +71,7 @@ export default function Home({navigation}) {
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => navigation.replace('Home')}
+          onPress={() => navigation.navigate('Monitor')}
           style={{
             backgroundColor: '#C4C4C4',
             height: 45,
