@@ -14,10 +14,35 @@ import axios from 'axios';
 import {sha1} from 'react-native-sha1';
 
 import {showMessage} from 'react-native-flash-message';
-export default function Tambah({navigation}) {
+export default function Edit({navigation, route}) {
+  const id = route.params.id;
+  const [data, setData] = useState([]);
+
+  const getData = (x, id) => {
+    axios
+      .post('https://zavalabs.com/project/punclutfarm/view.php', {
+        token: x,
+        id: id,
+      })
+      .then((res) => {
+        const obj = res.data;
+        console.log(obj);
+        setnama(obj[0].nama);
+        setphmin(obj[0].phmin);
+        setphmax(obj[0].phmax);
+        setecmin(obj[0].ecmin);
+        setecmax(obj[0].ecmax);
+        setsuhumin(obj[0].suhumin);
+        setsuhumax(obj[0].suhumax);
+        settinggimin(obj[0].tinggimin);
+        settinggimax(obj[0].tinggimax);
+      });
+  };
+
   useEffect(() => {
     sha1('151195Ez@').then((hash) => {
       settoken(hash.toLowerCase());
+      getData(hash.toLowerCase(), id);
     });
   }, []);
 
@@ -36,7 +61,8 @@ export default function Tambah({navigation}) {
   const masuk = () => {
     setLoading(true);
 
-    const data = {
+    const dataEdit = {
+      id: id,
       token: token,
       nama: nama,
       phmin: phmin,
@@ -50,7 +76,7 @@ export default function Tambah({navigation}) {
     };
 
     axios
-      .post('https://zavalabs.com/project/punclutfarm/add.php', data)
+      .post('https://zavalabs.com/project/punclutfarm/update.php', dataEdit)
       .then((res) => {
         showMessage({
           message: 'Data berhasil ditambah !',
@@ -59,7 +85,7 @@ export default function Tambah({navigation}) {
 
         setTimeout(() => {
           setLoading(false);
-          navigation.replace('Home');
+          navigation.replace('Daftar');
         }, 1200);
 
         console.log(res.data);
