@@ -20,7 +20,7 @@ export default function Edit({navigation, route}) {
 
   const getData = (x, id) => {
     axios
-      .post('https://zavalabs.com/project/punclutfarm/view.php', {
+      .post('https://zavalabs.com/project/punclutfarm/view', {
         token: x,
         id: id,
       })
@@ -76,7 +76,7 @@ export default function Edit({navigation, route}) {
     };
 
     axios
-      .post('https://zavalabs.com/project/punclutfarm/update.php', dataEdit)
+      .post('https://zavalabs.com/project/punclutfarm/update', dataEdit)
       .then((res) => {
         showMessage({
           message: 'Data berhasil ditambah !',

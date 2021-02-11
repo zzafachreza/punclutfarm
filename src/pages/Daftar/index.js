@@ -7,6 +7,7 @@ import {
   FlatList,
   SafeAreaView,
   RefreshControl,
+  ActivityIndicator,
   Image,
   Dimensions,
   TouchableOpacity,
@@ -35,6 +36,7 @@ export default function Daftar({navigation}) {
   const [refreshing, setRefreshing] = React.useState(false);
   const [data, setData] = useState([]);
   const [token, settoken] = useState('');
+  const [loading, setLoading] = useState(false);
   const windowWidth = Dimensions.get('window').width;
   const windowHeight = Dimensions.get('window').height;
 
@@ -43,34 +45,29 @@ export default function Daftar({navigation}) {
 
   const getData = (x) => {
     axios
-      .post('https://zavalabs.com/project/punclutfarm/data.php', {
+      .post('https://zavalabs.com/project/punclutfarm/data', {
         token: x,
       })
       .then((res) => {
+        setLoading(false);
         const obj = res.data;
-
         const result = Object.keys(obj).map((key) => obj[key]);
-        console.log(result);
         setresult(result);
-
         setData(obj);
       });
   };
 
   const hapusData = (x, id) => {
     axios
-      .post('https://zavalabs.com/project/punclutfarm/delete.php', {
+      .post('https://zavalabs.com/project/punclutfarm/delete', {
         token: x,
         id: id,
       })
       .then((res) => {
-        console.log(res);
-
         if (res.data == 200) {
           showMessage({
             message: 'Data berhasil dihapus !',
           });
-
           getData(x);
         }
       });
@@ -88,6 +85,7 @@ export default function Daftar({navigation}) {
   }, []);
 
   useEffect(() => {
+    setLoading(true);
     sha1('151195Ez@').then((hash) => {
       settoken(hash.toLowerCase());
       getData(hash.toLowerCase());
@@ -244,6 +242,22 @@ export default function Daftar({navigation}) {
           </TableWrapper>
         ))}
       </Table>
+      {loading && (
+        <View
+          style={{
+            flex: 1,
+            position: 'absolute',
+            justifyContent: 'center',
+            alignItems: 'center',
+            // backgroundColor: '#FFF',
+            width: '100%',
+            top: 0,
+            opacity: 0.7,
+            height: '100%',
+          }}>
+          <ActivityIndicator color="#16A858" size="large" />
+        </View>
+      )}
     </ScrollView>
   );
 }

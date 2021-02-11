@@ -50,7 +50,7 @@ export default function Tambah({navigation}) {
     };
 
     axios
-      .post('https://zavalabs.com/project/punclutfarm/add.php', data)
+      .post('https://zavalabs.com/project/punclutfarm/add', data)
       .then((res) => {
         showMessage({
           message: 'Data berhasil ditambah !',

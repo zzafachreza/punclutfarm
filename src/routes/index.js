@@ -1,7 +1,16 @@
 import React from 'react';
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
-import {Splash, Home, Login, Tambah, Daftar, Monitor, Edit} from '../pages';
+import {
+  Splash,
+  Home,
+  Login,
+  Tambah,
+  Daftar,
+  Monitor,
+  Edit,
+  Tanaman,
+} from '../pages';
 
 const Stack = createStackNavigator();
 
@@ -69,6 +78,19 @@ export default function Router() {
       <Stack.Screen
         name="Monitor"
         component={Monitor}
+        options={{
+          headerTitle: 'Monitoring Tanaman',
+          headerTintColor: 'white',
+          headerStyle: {
+            backgroundColor: '#16A858',
+            elevation: 0, // remove shadow on Android
+          },
+        }}
+      />
+
+      <Stack.Screen
+        name="Tanaman"
+        component={Tanaman}
         options={{
           headerTitle: 'Monitoring Tanaman',
           headerTintColor: 'white',
