@@ -328,7 +328,7 @@ export default function Tanaman({navigation, route}) {
                 <Text
                   style={{
                     color: '#0E542E',
-                    fontSize: 18,
+                    fontSize: 14,
                     fontFamily: 'Nunito-Regular',
                   }}>
                   pH :
@@ -346,7 +346,7 @@ export default function Tanaman({navigation, route}) {
                 <Text
                   style={{
                     color: '#0E542E',
-                    fontSize: 30,
+                    fontSize: 18,
                     // marginLeft: 50,
                     fontFamily: 'Nunito-SemiBold',
                   }}>
@@ -360,9 +360,8 @@ export default function Tanaman({navigation, route}) {
                 onPress={() => tambah('ph')}
                 style={{
                   backgroundColor: '#16A858',
+                  width: 60,
                   height: 45,
-                  flex: 1,
-                  //   margin: 10,
                   marginRight: 5,
                   borderRadius: 10,
                   justifyContent: 'center',
@@ -375,9 +374,8 @@ export default function Tanaman({navigation, route}) {
                 onPress={() => kurang('ph')}
                 style={{
                   backgroundColor: '#000',
+                  width: 60,
                   height: 45,
-                  //   margin: 10,
-                  flex: 1,
                   borderRadius: 10,
                   justifyContent: 'center',
                   alignItems: 'center',
@@ -424,7 +422,7 @@ export default function Tanaman({navigation, route}) {
                 <Text
                   style={{
                     color: '#0E542E',
-                    fontSize: 30,
+                    fontSize: 18,
                     // marginLeft: 50,
                     fontFamily: 'Nunito-SemiBold',
                   }}>
@@ -438,8 +436,9 @@ export default function Tanaman({navigation, route}) {
                 onPress={() => tambah('ec')}
                 style={{
                   backgroundColor: '#16A858',
+                  width: 60,
                   height: 45,
-                  flex: 1,
+
                   //   margin: 10,
                   marginRight: 5,
                   borderRadius: 10,
@@ -453,9 +452,8 @@ export default function Tanaman({navigation, route}) {
                 onPress={() => kurang('ec')}
                 style={{
                   backgroundColor: '#000',
+                  width: 60,
                   height: 45,
-                  //   margin: 10,
-                  flex: 1,
                   borderRadius: 10,
                   justifyContent: 'center',
                   alignItems: 'center',
@@ -501,7 +499,7 @@ export default function Tanaman({navigation, route}) {
                 <Text
                   style={{
                     color: '#0E542E',
-                    fontSize: 30,
+                    fontSize: 18,
                     // marginLeft: 50,
                     fontFamily: 'Nunito-SemiBold',
                   }}>
@@ -515,9 +513,9 @@ export default function Tanaman({navigation, route}) {
                 onPress={() => tambah('suhu')}
                 style={{
                   backgroundColor: '#16A858',
+                  width: 60,
                   height: 45,
-                  flex: 1,
-                  //   margin: 10,
+
                   marginRight: 5,
                   borderRadius: 10,
                   justifyContent: 'center',
@@ -530,9 +528,8 @@ export default function Tanaman({navigation, route}) {
                 onPress={() => kurang('suhu')}
                 style={{
                   backgroundColor: '#000',
+                  width: 60,
                   height: 45,
-                  //   margin: 10,
-                  flex: 1,
                   borderRadius: 10,
                   justifyContent: 'center',
                   alignItems: 'center',
@@ -566,7 +563,7 @@ export default function Tanaman({navigation, route}) {
                     fontSize: 18,
                     fontFamily: 'Nunito-Regular',
                   }}>
-                  Tinggi :
+                  Ketinggian Air :
                 </Text>
               </View>
               <View
@@ -578,7 +575,7 @@ export default function Tanaman({navigation, route}) {
                 <Text
                   style={{
                     color: '#0E542E',
-                    fontSize: 30,
+                    fontSize: 18,
                     // marginLeft: 40,
                     fontFamily: 'Nunito-SemiBold',
                   }}>
@@ -592,9 +589,8 @@ export default function Tanaman({navigation, route}) {
                 onPress={() => tambah('tinggi')}
                 style={{
                   backgroundColor: '#16A858',
+                  width: 60,
                   height: 45,
-                  flex: 1,
-                  //   margin: 10,
                   marginRight: 5,
                   borderRadius: 10,
                   justifyContent: 'center',
@@ -607,9 +603,8 @@ export default function Tanaman({navigation, route}) {
                 onPress={() => kurang('tinggi')}
                 style={{
                   backgroundColor: '#000',
+                  width: 60,
                   height: 45,
-                  //   margin: 10,
-                  flex: 1,
                   borderRadius: 10,
                   justifyContent: 'center',
                   alignItems: 'center',

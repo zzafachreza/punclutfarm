@@ -122,7 +122,7 @@ export default function Edit({navigation, route}) {
           <Text
             style={{
               color: '#0E542E',
-              fontSize: 18,
+              fontSize: 15,
               fontFamily: 'Nunito-Regular',
             }}>
             Nama Tanaman :
@@ -134,7 +134,7 @@ export default function Edit({navigation, route}) {
               borderRadius: 10,
               borderWidth: 1,
               paddingLeft: 10,
-              fontSize: 18,
+              fontSize: 15,
               fontFamily: 'Nunito-Regular',
             }}
             value={nama}
@@ -153,7 +153,7 @@ export default function Edit({navigation, route}) {
               <Text
                 style={{
                   color: '#0E542E',
-                  fontSize: 18,
+                  fontSize: 15,
                   fontFamily: 'Nunito-Regular',
                 }}>
                 pH Min :
@@ -166,7 +166,7 @@ export default function Edit({navigation, route}) {
                   borderWidth: 1,
                   borderRadius: 10,
                   paddingLeft: 10,
-                  fontSize: 18,
+                  fontSize: 15,
                   fontFamily: 'Nunito-Regular',
                   borderColor: '#0E542E',
                 }}
@@ -176,7 +176,7 @@ export default function Edit({navigation, route}) {
               <Text
                 style={{
                   color: '#0E542E',
-                  fontSize: 18,
+                  fontSize: 15,
                   fontFamily: 'Nunito-Regular',
                 }}>
                 pH Max :
@@ -189,7 +189,7 @@ export default function Edit({navigation, route}) {
                   borderWidth: 1,
                   borderRadius: 10,
                   paddingLeft: 10,
-                  fontSize: 18,
+                  fontSize: 15,
                   fontFamily: 'Nunito-Regular',
                   borderColor: '#0E542E',
                 }}
@@ -209,7 +209,7 @@ export default function Edit({navigation, route}) {
               <Text
                 style={{
                   color: '#0E542E',
-                  fontSize: 18,
+                  fontSize: 15,
                   fontFamily: 'Nunito-Regular',
                 }}>
                 EC Min :
@@ -222,7 +222,7 @@ export default function Edit({navigation, route}) {
                   borderWidth: 1,
                   borderRadius: 10,
                   paddingLeft: 10,
-                  fontSize: 18,
+                  fontSize: 15,
                   fontFamily: 'Nunito-Regular',
                   borderColor: '#0E542E',
                 }}
@@ -232,7 +232,7 @@ export default function Edit({navigation, route}) {
               <Text
                 style={{
                   color: '#0E542E',
-                  fontSize: 18,
+                  fontSize: 15,
                   fontFamily: 'Nunito-Regular',
                 }}>
                 EC Max :
@@ -245,7 +245,7 @@ export default function Edit({navigation, route}) {
                   borderWidth: 1,
                   borderRadius: 10,
                   paddingLeft: 10,
-                  fontSize: 18,
+                  fontSize: 15,
                   fontFamily: 'Nunito-Regular',
                   borderColor: '#0E542E',
                 }}
@@ -265,7 +265,7 @@ export default function Edit({navigation, route}) {
               <Text
                 style={{
                   color: '#0E542E',
-                  fontSize: 18,
+                  fontSize: 15,
                   fontFamily: 'Nunito-Regular',
                 }}>
                 Suhu Min :
@@ -278,7 +278,7 @@ export default function Edit({navigation, route}) {
                   borderWidth: 1,
                   borderRadius: 10,
                   paddingLeft: 10,
-                  fontSize: 18,
+                  fontSize: 15,
                   fontFamily: 'Nunito-Regular',
                   borderColor: '#0E542E',
                 }}
@@ -288,7 +288,7 @@ export default function Edit({navigation, route}) {
               <Text
                 style={{
                   color: '#0E542E',
-                  fontSize: 18,
+                  fontSize: 15,
                   fontFamily: 'Nunito-Regular',
                 }}>
                 Suhu Max :
@@ -301,7 +301,7 @@ export default function Edit({navigation, route}) {
                   borderWidth: 1,
                   borderRadius: 10,
                   paddingLeft: 10,
-                  fontSize: 18,
+                  fontSize: 15,
                   fontFamily: 'Nunito-Regular',
                   borderColor: '#0E542E',
                 }}
@@ -321,10 +321,10 @@ export default function Edit({navigation, route}) {
               <Text
                 style={{
                   color: '#0E542E',
-                  fontSize: 18,
+                  fontSize: 15,
                   fontFamily: 'Nunito-Regular',
                 }}>
-                Tinggi Min :
+                Ketinggian Air Min :
               </Text>
               <TextInput
                 keyboardType="decimal-pad"
@@ -334,7 +334,7 @@ export default function Edit({navigation, route}) {
                   borderWidth: 1,
                   borderRadius: 10,
                   paddingLeft: 10,
-                  fontSize: 18,
+                  fontSize: 15,
                   fontFamily: 'Nunito-Regular',
                   borderColor: '#0E542E',
                 }}
@@ -344,10 +344,10 @@ export default function Edit({navigation, route}) {
               <Text
                 style={{
                   color: '#0E542E',
-                  fontSize: 18,
+                  fontSize: 15,
                   fontFamily: 'Nunito-Regular',
                 }}>
-                Tinggi Max :
+                Ketinggian Air Max :
               </Text>
               <TextInput
                 keyboardType="decimal-pad"
@@ -357,7 +357,7 @@ export default function Edit({navigation, route}) {
                   borderWidth: 1,
                   borderRadius: 10,
                   paddingLeft: 10,
-                  fontSize: 18,
+                  fontSize: 15,
                   fontFamily: 'Nunito-Regular',
                   borderColor: '#0E542E',
                 }}
@@ -379,10 +379,10 @@ export default function Edit({navigation, route}) {
             <Text
               style={{
                 color: '#FFF',
-                fontSize: 18,
+                fontSize: 15,
                 fontFamily: 'Nunito-Regular',
               }}>
-              LOGIN
+              SIMPAN
             </Text>
           </TouchableOpacity>
         </View>

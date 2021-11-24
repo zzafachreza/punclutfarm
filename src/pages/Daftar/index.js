@@ -40,7 +40,7 @@ export default function Daftar({navigation}) {
   const windowWidth = Dimensions.get('window').width;
   const windowHeight = Dimensions.get('window').height;
 
-  const tableHead = ['Tanaman', 'pH', 'EC', 'Suhu', 'Tinggi', 'Action'];
+  const tableHead = ['Tanaman', 'pH', 'EC', 'Suhu', 'Ketinggian Air', 'Action'];
   const [result, setresult] = useState([]);
 
   const getData = (x) => {
@@ -185,7 +185,7 @@ export default function Daftar({navigation}) {
         style={{
           backgroundColor: '#16A858',
           height: 20,
-          width: 35,
+          width: 30,
           // borderRadius: 10,
           justifyContent: 'center',
           alignItems: 'center',
@@ -197,7 +197,7 @@ export default function Daftar({navigation}) {
         style={{
           backgroundColor: 'red',
           height: 20,
-          width: 35,
+          width: 30,
           // borderRadius: 10,
           justifyContent: 'center',
           alignItems: 'center',
@@ -265,22 +265,24 @@ export default function Daftar({navigation}) {
 const styles = StyleSheet.create({
   container: {flex: 1, padding: 0, paddingTop: 30, backgroundColor: '#fff'},
   head: {
-    height: 40,
+    height: 35,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#0E542E',
   },
   text: {
-    marginVertical: 10,
+    // marginVertical: 10,
+    textAlign: 'center',
     marginHorizontal: 5,
     color: '#FFF',
     // borderWidth: 1,
+    fontSize: 12,
     justifyContent: 'center',
     alignItems: 'center',
   },
   textRow: {
     marginVertical: 10,
-    marginHorizontal: 5,
+    marginHorizontal: 3,
     color: '#000',
     // borderWidth: 1,
     justifyContent: 'center',
